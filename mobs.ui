@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>481</width>
+     <height>371</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="choice">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>481</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Поиск</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по названию существа</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>211</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по количеству уникального дропа</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>211</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>70</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по названию выподаемых предметов</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uniqueDrop">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>120</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>90</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(писать через ';')</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по количеству</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>выподаемых монет</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="money_num">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>51</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>99</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="money">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>серебрянные</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>медные</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>золотые</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="friendliness">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>151</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>любая</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>агресивен</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>пассивный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>дружелюбный</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>150</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по агресивности</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по местонахождению</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="location1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>преисподняя</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземные джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>гранитные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>мраморные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>полнолуние</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хэллоуин</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>паучьи гнёзда</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>кладбище</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>поверхность</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ближе к океану</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>лес</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ночь</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземелья</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>слизнепад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хардмод</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>160</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>золотой версии</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>150</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск по</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="golden">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>180</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>любая</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>присутствует</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>отсутствует</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="location2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>преисподняя</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземные джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>гранитные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>мраморные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>полнолуние</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хэллоуин</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>паучьи гнёзда</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>кладбище</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>поверхность</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ближе к океану</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>лес</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ночь</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземелья</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>слизнепад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хардмод</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="location3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>преисподняя</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземные джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>джунгли</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>гранитные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>мраморные пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>полнолуние</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хэллоуин</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>пещеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>паучьи гнёзда</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>кладбище</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>поверхность</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ближе к океану</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>лес</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ночь</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>подземелья</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>слизнепад</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>хардмод</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>210</y>
+     <width>273</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QRadioButton" name="loc_or">
+      <property name="text">
+       <string>местанохождение работает как &quot;или&quot;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="text">
+       <string>местанохождение работает как &quot;и&quot;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>10</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ВЫХОД В МЕНЮ</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
