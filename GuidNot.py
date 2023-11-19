@@ -7,10 +7,15 @@ from PyQt5.QtGui import QPixmap
 
 
 class CraftTable(QDialog):
+    """
+    Используется при выборе CraftБазыДанных
+    Показывает Craft базу данных с пользовательсой сортировкой
+    """
     def __init__(self):
         super().__init__()
         self.search_ansver = None
         uic.loadUi("craft.ui", self)
+        self.con = sqlite3.connect('crafting.db')
         self.setWindowTitle("Craft")
         self.executor()
 
@@ -34,7 +39,6 @@ class CraftTable(QDialog):
         Записывает таблицу по SQL запросу
         :return: Ничего
         """
-        self.con = sqlite3.connect('crafting.db')
         cur = self.con.cursor()
         result = cur.execute(self.search_ansver).fetchall()
         if len(result) != 0:
@@ -191,10 +195,15 @@ class CraftTable(QDialog):
 
 
 class MobTable(QDialog):
+    """
+    Используется при выборе MobБазыДанных
+    Показывает Mob базу данных с пользовательсой сортировкой
+    """
     def __init__(self):
         super().__init__()
         self.search_ansver = None
         uic.loadUi("mobs.ui", self)
+        self.con = sqlite3.connect('crafting.db')
         self.setWindowTitle("Craft")
         self.executor()
 
@@ -218,7 +227,6 @@ class MobTable(QDialog):
         Записывает таблицу по SQL запросу
         :return: Ничего
         """
-        self.con = sqlite3.connect('crafting.db')
         cur = self.con.cursor()
         result = cur.execute(self.search_ansver).fetchall()
         # Проверка если нет ни одной тредуемой строчки
@@ -378,7 +386,7 @@ class MobTable(QDialog):
         """
         Создание части SQL запроса по местонахождении монстри
         :param or_or_and: True или False
-        :param tuple tegs: Список
+        :param tuple location: Список
         :return: Часть SQL запроса
         """
         flag = " AND "
@@ -412,6 +420,10 @@ class MobTable(QDialog):
 
 
 class Menu(QWidget):
+    """
+    Окно которое выводится в начале программы
+    позволяет выбртать по каой базе данных делать поиск
+    """
     def __init__(self):
         super().__init__()
         self.search_ansver = None
