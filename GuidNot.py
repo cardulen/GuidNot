@@ -49,7 +49,6 @@ class CraftTable(QDialog):
                 for j, elem in enumerate(row):
                     self.tw.setItem(i, j, QTableWidgetItem(str(elem)))
             self.tw.resizeColumnsToContents()
-            self.con.close()
 
     def create_ansver(self):
         """
@@ -112,7 +111,7 @@ class CraftTable(QDialog):
         Создание части SQL запроса по названию 1 столбца
         :return: Часть SQL запроса
         """
-        ansver = f"(name LIKE '%{self.name.text()}%')"
+        ansver = f"((name LIKE '%{self.name.text()}%') OR (name LIKE '%{self.name.text().lower()}%'))"
         return ansver
 
     def nums_items(self):
@@ -204,7 +203,7 @@ class MobTable(QDialog):
         self.search_ansver = None
         uic.loadUi("mobs.ui", self)
         self.con = sqlite3.connect('crafting.db')
-        self.setWindowTitle("Craft")
+        self.setWindowTitle("Mobs")
         self.executor()
 
     def executor(self):
@@ -316,7 +315,7 @@ class MobTable(QDialog):
         Создание части SQL запроса по названию монстра
         :return: Часть SQL запроса
         """
-        ansver = f"(name LIKE '%{self.name.text()}%')"
+        ansver = f"(name LIKE '%{self.name.text()}%' or name LIKE '%{self.name.text().lower()}%')"
         return ansver
 
     def nums_items(self):
@@ -447,19 +446,19 @@ class Menu(QWidget):
         Меняет картинки
         :return: Ничего
         """
-        pixmap = QPixmap("img_3.png")
+        pixmap = QPixmap("pic/img_3.png")
         self.picture2.setPixmap(pixmap)
         # Картинка "Выход"
         if self.dial.value() == 1:
-            pixmap = QPixmap("img_1.png")
+            pixmap = QPixmap("pic/img_1.png")
             self.picture1.setPixmap(pixmap)
         # Картинка "Создание"
         elif self.dial.value() == 2:
-            pixmap = QPixmap("img.png")
+            pixmap = QPixmap("pic/img.png")
             self.picture1.setPixmap(pixmap)
         # Картинка "Монстр"
         elif self.dial.value() == 0:
-            pixmap = QPixmap("img_2.png")
+            pixmap = QPixmap("pic/img_2.png")
             self.picture1.setPixmap(pixmap)
 
     def go_to_table(self):
